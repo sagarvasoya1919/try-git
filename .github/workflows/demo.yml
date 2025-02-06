@@ -26,4 +26,5 @@ jobs:
             - name: download artifact
               uses: actions/download-artifact@v4
               with:
-                name: build-artifact
+                name: build=artifact
+                path: ${{github.workspace}}
