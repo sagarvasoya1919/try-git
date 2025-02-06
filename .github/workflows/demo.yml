@@ -1,1 +1,21 @@
+name: demo-action
 
+on:
+    issues:
+        types: opened
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: run a sample
+              run: echo hello world
+
+            - name: upload artifact
+              uses: action/upload-artifact@v4
+              with:
+                name: build=artifact
+                path: ${{github.workspace}}
