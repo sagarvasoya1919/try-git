@@ -15,7 +15,7 @@ jobs:
               run: echo hello world
 
             - name: upload artifact
-              uses: action/upload-artifact@v4
+              uses: actions/upload-artifact@v4
               with:
                 name: build=artifact
                 path: ${{github.workspace}}
